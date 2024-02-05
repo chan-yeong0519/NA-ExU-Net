@@ -25,12 +25,8 @@ RUN pip3 install wrapt --upgrade --ignore-installed
 RUN pip install torch==1.8.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
 RUN pip install torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
 
-RUN pip3 install wandb --upgrade
-RUN wandb login 398ae091e9c781c2974ce0d7c22e09d953920e16
-
 RUN pip install scikit-learn
 RUN pip install scipy
-#RUN pip install pytorch_lightning
 RUN pip install omegaconf==2.0.6
 RUN pip install torchsummary
 RUN pip install torch_audiomentations
