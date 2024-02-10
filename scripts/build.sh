@@ -1,0 +1,1 @@
+sudo docker build -t new:1.8.1 ./Dockerfile
