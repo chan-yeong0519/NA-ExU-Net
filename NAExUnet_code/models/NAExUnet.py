@@ -53,12 +53,12 @@ class NAExU_Net(nn.Module):
 					setattr(self, 'd_res_{}_{}'.format(j,i+1), self._make_d_layer(SEBasicBlock, self.l_channel[i]//2, self.l_num_convblocks[i], self.stride[i]))
 
 		# Extractor
-		self.inplanes =  self.l_channel[0]+self.l_channel[0]//self.ext_reduction_ratio[0]
+		self.inplanes =  self.l_channel[0] + self.l_channel[0]
 		self.conv_channel = self.l_channel[0]
 		for i in range(0, self.n_level):
-			setattr(self, 'extractor_skip_con_conv_{}'.format(i+1), nn.Conv2d(self.conv_channel, self.conv_channel//self.ext_reduction_ratio[i], kernel_size=1, bias=False))
+			setattr(self, 'extractor_skip_con_conv_{}'.format(i+1), self._make_skip_conv_module(self.conv_channel, self.ext_reduction_ratio[i]))
 			setattr(self, 'd2_res_{}'.format(i+1), self._make_d_layer(SEBasicBlock, self.l_channel[i], self.l_num_convblocks[i], self.stride[i]))
-			self.inplanes = self.l_channel[i]+self.l_channel[i]//self.ext_reduction_ratio[i+1]
+			self.inplanes = self.l_channel[i] + self.l_channel[i]
 			self.conv_channel = self.l_channel[i]
 
 		#################################################
@@ -145,6 +145,16 @@ class NAExU_Net(nn.Module):
 				nn.Sigmoid(),
 			)
 		return attention
+
+	def _make_skip_conv_module(self, in_channel, reduction_ratio):
+		layer = nn.Sequential(
+			nn.Conv2d(in_channel, in_channel//reduction_ratio, kernel_size=1, bias=False),
+			nn.ReLU(inplace=True),
+			nn.BatchNorm2d(in_channel//reduction_ratio),
+			nn.Conv2d(in_channel//reduction_ratio, in_channel, kernel_size=1, bias=False),
+		)
+		
+		return layer
 
 	def forward(self, x, only_code=False):
 		
