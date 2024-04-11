@@ -70,10 +70,10 @@ def get_args():
         # model
         'first_kernel_size'     : 7,
         'first_stride_size'     : (2,1),
-        'first_padding_size'    : 3,
-        'encoder_split_level'   : 1,
+        'first_padding_size'    : 2,
+        'encoder_split_level'   : 2,
         'ext_skip_conv_level'   : 3,
-        'ext_reduction_ratio'   : [1,1,1,2,1],
+        'ext_reduction_ratio'   : [1,1,2,2,1],
         'l_channel'             : [16, 32, 64, 128],
         'l_num_convblocks'      : [3, 4, 6, 3],
         'code_dim'              : 128,
