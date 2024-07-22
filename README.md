@@ -43,12 +43,12 @@ Set experimental arguments in `arguments.py` file. Here is list of system argume
 
 ```python
 1. 'usable_gpu': '' # ex) '0,1,2,3'
-  'usable_gpu' is GPUs which is used
+  'usable_gpu' is the GPU which is used in the experiment.
 
 2. 'path_...': ''
-	'path_...' is path where ... dataset is stored.
-  'path_logging' is path of saving experiments.
-	input type is str
+  'path_...' is the path where ... dataset is stored.
+  'path_logging' is the path of saving experiments.
+  The Input type is str
 ```
 
 Then, just run main.py in NAExUnet_code!
