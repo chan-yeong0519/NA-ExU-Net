@@ -23,7 +23,7 @@ def get_args():
 
         # device
         'num_workers'   : 20,
-        'usable_gpu'    : '0,1,2,3',
+        'usable_gpu'    : '',
         'tqdm_ncols'    : 90,
         'path_scripts'     : os.path.dirname(os.path.realpath(__file__))
     }
