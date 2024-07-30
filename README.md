@@ -59,5 +59,11 @@ python main.py
 # Citation
 Please cite this paper if you make use of the code. 
 '''
-Will be added after proceeding.
+@article{lim2024noise,
+  title={Noise-aware Extended U-Net with Split Encoder and Feature Refinement Module for Robust Speaker Verification in Noisy Environments},
+  author={Lim, Chan-Yeong and Heo, Jungwoo and Kim, Ju-Ho and Shin, Hyun-Seo and Yu, Ha-Jin},
+  journal={IEEE Access},
+  year={2024},
+  publisher={IEEE}
+}
 '''
