@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">
-    Noise-Aware Extended U-Net for Speaker Verification in Noisy Environments
+    Noise-aware Extended U-Net with Split Encoder and Feature Refinement Module for Robust Speaker Verification in Noisy Environments
 </h2>
 
 <h3 align="left">
@@ -16,8 +16,8 @@
 
 This repository offers source code for the following paper:
 
-* **Title** : Noise-Aware Extended U-Net for Speaker Verification in Noisy Environments (Accepted for IEEE ACCESS)
-* **Authors** :  Chan-yeong Lim, Jungwoo Heo, Ju-ho Kim, Hyun-seo Shin, and Ha-Jin Yu
+* **Title** : Noise-aware Extended U-Net with Split Encoder and Feature Refinement Module for Robust Speaker Verification in Noisy Environments (Accepted for publication in IEEE Access)
+* **Authors** : Chan-yeong Lim, Jungwoo Heo, Ju-ho Kim, Hyun-seo Shin, and Ha-Jin Yu
 
 ### Paper abstract
 <img src="https://github.com/chan-yeong0519/NA-ExU-Net/blob/main/NA-ExU-Net_framework.PNG" width="1000" height="350">
